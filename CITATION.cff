@@ -4,10 +4,9 @@ title: "Repertorios del castigo: scripts de armonización y análisis de comenta
 type: software
 authors:
   - alias: "ExoDoxa"
-version: "1.0.0"
+version: "1.0.1"
 date-released: "2026-10-22"
 license: MIT
-doi: "10.5281/zenodo.23557847"
 repository-code: "https://github.com/ExoDoxa/repertorios-del-castigo"
 keywords:
   - redes sociales

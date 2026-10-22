@@ -29,7 +29,7 @@ Las tres bases (FB+IG, TikTok y la conjunta) tienen las mismas 31 columnas en la
 | `Fecha_Extraccion` | Momento de la extracción. |
 | `ID_Extraccion` | Identificador de la corrida de extracción. |
 | `Duplicado_Exacto` | Fila idéntica a otra en TODAS sus columnas (extracción repetida). Es False en todo el corpus. NO marca textos repetidos: para eso hay que normalizar Texto_Comentario. |
-| `Duplicado_Por_ID` | Mismo ID_Comentario que otra fila de la misma plataforma. En Facebook y TikTok el ID es un hash de autor+texto, así que marca a la misma persona pegando el mismo comentario en otra publicación (nunca dentro de la misma). La clave única es ID_Post_Origen + ID_Comentario. |
+| `Duplicado_Por_ID` | Mismo ID_Comentario que otra fila de la misma plataforma (nunca dentro de la misma publicación). En Facebook y TikTok el ID es un hash del nombre visible y el texto, así que coincide cuando cuentas con el mismo nombre visible escriben el mismo texto en publicaciones distintas: en 146 de los 153 IDs repetidos los @ son distintos y casi todos son emojis o expresiones de 1–2 palabras. NO indica que una misma persona copie su comentario. La clave única es ID_Post_Origen + ID_Comentario. |
 | `Parent_Source` | Origen del vínculo con el padre: ID explícito o mención inicial inferida. |
 | `Parent_Confidence` | Confianza de ese vínculo. |
 | `Texto_Truncado` | El texto parece cortado por la plataforma. |
