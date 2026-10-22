@@ -1,0 +1,19 @@
+{
+  "title": "Repertorios del castigo: scripts de armonización y análisis de comentarios en Facebook, Instagram y TikTok",
+  "description": "<p>Código que transforma las exportaciones crudas de comentarios de Facebook, Instagram y TikTok en las bases analíticas de un estudio cualitativo sobre la legitimación discursiva de un castigo extralegal en Colombia (diciembre de 2025). Incluye el armonizador del corpus, la generación de las bases y del registro de publicaciones, la transcripción de videos con faster-whisper y un léxico exploratorio. No incluye datos: contienen información personal y se comparten en versión anonimizada a solicitud razonable.</p>",
+  "upload_type": "software",
+  "creators": [
+    { "name": "ExoDoxa" }
+  ],
+  "license": "MIT",
+  "language": "spa",
+  "keywords": [
+    "redes sociales",
+    "castigo extralegal",
+    "análisis de contenido",
+    "Facebook",
+    "Instagram",
+    "TikTok",
+    "Colombia"
+  ]
+}
