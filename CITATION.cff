@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Si usas este software, cítalo así."
+title: "Repertorios del castigo: scripts de armonización y análisis de comentarios en Facebook, Instagram y TikTok"
+type: software
+authors:
+  - alias: "ExoDoxa"
+version: "1.0.0"
+date-released: "2026-10-22"
+license: MIT
+repository-code: "https://github.com/ExoDoxa/repertorios-del-castigo"
+keywords:
+  - redes sociales
+  - castigo extralegal
+  - análisis de contenido
+  - Facebook
+  - Instagram
+  - TikTok
+  - Colombia

@@ -1,0 +1,17 @@
+# Ningún dato se publica: solo datos/README.md
+datos/*
+!datos/README.md
+
+# Por si acaso, fuera cualquier archivo de datos o medio en cualquier carpeta
+*.csv
+*.xlsx
+*.xls
+*.mp4
+*.har
+*.duckdb
+captions_*.json
+transcripciones_*.json
+
+__pycache__/
+*.pyc
+.venv/

@@ -1,0 +1,129 @@
+{
+  "_lectura": [
+    "Codificacion automatica por lexico. NO es codificacion manual validada.",
+    "Editable a mano: anade o quita patrones y vuelve a ejecutar",
+    "python analysis/build_dashboard_data.py",
+    "",
+    "'patrones' se buscan como SUBCADENA sobre el texto en minusculas y sin",
+    "tildes, para que 'venezolan' capture venezolano/venezolana/venezolanos.",
+    "",
+    "'identificacion' declara si el lexico mide el CONSTRUCTO o solo su TEMA:",
+    "  - 'directa'  : el vocabulario nombra el fenomeno (linchar => justicia por",
+    "                 propia mano). El recuento se sostiene.",
+    "  - 'solo_tema': el vocabulario detecta que se habla DE eso, no que ocurra",
+    "                 el fenomeno. Decir 'Petro' no es trivializar lo politico.",
+    "                 Estas dimensiones se muestran marcadas y NO deben leerse",
+    "                 como medida del constructo."
+  ],
+
+  "dimensiones": [
+    {
+      "id": "d1",
+      "label": "Trivialización de lo político en entornos digitales",
+      "short": "Trivialización política",
+      "identificacion": "solo_tema",
+      "nota": "Detecta mencion politica, no trivializacion. La ironia y el registro de burla exigen lectura humana.",
+      "patrones": [
+        "petro", "presidente", "gobierno", "politic", "izquierda", "derecha",
+        "uribe", "congreso", "candidat", "elecciones", "senador", "ministro",
+        "alcalde", "campana"
+      ]
+    },
+    {
+      "id": "d2",
+      "label": "Justicia por propia mano como forma de disciplinamiento digital",
+      "short": "Justicia por propia mano",
+      "identificacion": "directa",
+      "nota": "",
+      "patrones": [
+        "justicia por", "propia mano", "linchar", "lincha", "colgarlo",
+        "colgarlos", "matarlo", "matarlos", "quemarlo", "quemarlos",
+        "ajusticiar", "escarmiento", "turba", "plomo", "hacer justicia",
+        "que lo maten", "ojo por ojo", "ley del talion"
+      ]
+    },
+    {
+      "id": "d3",
+      "label": "Xenofobia y regionalismo como formas de exclusión digital",
+      "short": "Xenofobia y regionalismo",
+      "identificacion": "directa",
+      "nota": "",
+      "patrones": [
+        "venezolan", "veneco", "costen", "paisa", "rolo", "extranjer",
+        "frontera", "ilegal", "deport", "migrant", "invasion", "indio",
+        "guajiro", "chocoano", "vayanse a su"
+      ]
+    },
+    {
+      "id": "d4",
+      "label": "Moralización de la justicia punitiva en línea",
+      "short": "Moralización punitiva",
+      "identificacion": "directa",
+      "nota": "",
+      "patrones": [
+        "dios", "pena de muerte", "cadena perpetua", "castrar", "pudra",
+        "pudrirse", "infierno", "pecado", "alma", "merece", "carcel",
+        "condena", "castigo", "castigar", "juicio de dios", "karma",
+        "que pague", "sin perdon", "arda"
+      ]
+    },
+    {
+      "id": "d5",
+      "label": "Algoritmos y masificación de la información",
+      "short": "Algoritmos y masificación",
+      "identificacion": "solo_tema",
+      "nota": "Cobertura muy baja (~1,5%). Detecta mencion de plataformas, no el efecto de masificacion algoritmica.",
+      "patrones": [
+        "algoritmo", "viral", "tendencia", "redes sociales", "compartir",
+        "difund", "alcance", "seguidores", "para ti", "fyp", "repost"
+      ]
+    },
+    {
+      "id": "d6",
+      "label": "Mutación de la información frente a la ambigüedad digital",
+      "short": "Mutación informativa",
+      "identificacion": "solo_tema",
+      "nota": "Dominada por 'verdad', que es palabra comun. Separa mal la ambiguedad informativa de la afirmacion moral.",
+      "patrones": [
+        "fake", "falso", "mentira", "rumor", "no se sabe", "desmentid",
+        "montaje", "bulo", "confirm", "version", "aclarar", "se dice que",
+        "dicen que", "sin pruebas", "no hay pruebas"
+      ]
+    }
+  ],
+
+  "macrogrupos": [
+    { "id": "disciplinamiento", "label": "Disciplinamiento y castigo", "dimensiones": ["d2", "d4"] },
+    { "id": "exclusion", "label": "Exclusión y política", "dimensiones": ["d3", "d1"] },
+    { "id": "informacion", "label": "Información y circulación", "dimensiones": ["d6", "d5"] }
+  ],
+
+  "_encuadres": [
+    "Panel 04. Encuadre narrativo de un comentario, para seguir como cambia el",
+    "encuadre DOMINANTE de un mismo hilo entre momentos. El orden importa: se",
+    "evalua de arriba abajo y gana el primero que acierta, porque un desmentido",
+    "que cita el rumor debe contar como desmentido."
+  ],
+  "encuadres": [
+    {
+      "id": "desmentido",
+      "label": "Desmentido / rectificación",
+      "patrones": ["falso", "fake", "no es cierto", "desmentid", "montaje", "bulo", "mentira", "no paso", "aclarar", "sin pruebas", "no hay pruebas"]
+    },
+    {
+      "id": "convocatoria",
+      "label": "Convocatoria a la acción",
+      "patrones": ["compartan", "difundan", "hay que", "salgamos", "marcha", "firmemos", "denuncien", "no dejen", "exijamos", "unamonos", "reportenlo"]
+    },
+    {
+      "id": "denuncia",
+      "label": "Denuncia con nombre propio",
+      "patrones": ["se llama", "el nombre", "fue el", "fueron los", "el papa", "la mama", "el padrastro", "el tio", "el vecino", "identificad", "capturad"]
+    },
+    {
+      "id": "rumor",
+      "label": "Rumor sin fuente",
+      "patrones": ["dicen que", "se dice", "escuche que", "me contaron", "al parecer", "supuestamente", "parece que", "no se sabe", "version"]
+    }
+  ]
+}
