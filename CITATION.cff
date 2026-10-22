@@ -7,6 +7,7 @@ authors:
 version: "1.0.1"
 date-released: "2026-10-22"
 license: MIT
+doi: "10.5281/zenodo.23574288"
 repository-code: "https://github.com/ExoDoxa/repertorios-del-castigo"
 keywords:
   - redes sociales
