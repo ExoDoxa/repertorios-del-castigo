@@ -1,5 +1,7 @@
 # Repertorios del castigo
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23557846.svg)](https://doi.org/10.5281/zenodo.23557846)
+
 **Scripts de armonización y análisis de un corpus de comentarios en Facebook, Instagram y TikTok sobre
 un caso de castigo extralegal en Colombia (diciembre de 2025).**
 
@@ -66,7 +68,9 @@ prevalencias.
 
 ## Cómo citar
 
-Ver [CITATION.cff](CITATION.cff). Cada versión publicada tiene un DOI en Zenodo.
+ExoDoxa. (2026). *Repertorios del castigo: scripts de armonización y análisis de comentarios en Facebook, Instagram y TikTok* (Versión 1.0.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.23557847
+
+El DOI 10.5281/zenodo.23557846 apunta siempre a la versión más reciente. Ver también [CITATION.cff](CITATION.cff).
 
 ## Licencia
 
