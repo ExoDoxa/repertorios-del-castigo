@@ -56,7 +56,7 @@ TIPO = {
     "inst8.csv": ("medio local o regional", "Guajira News"),
     "inst11.csv": ("página de noticias sin redacción", "La certeza"),
     "inst4.csv": ("medio nacional", "La Kalle (emisora nacional)"),
-    "inst9.csv": ("creador de contenido", "Informe fantasma (relatos de crímenes)"),
+    "inst9.csv": ("página de noticias sin redacción", "Informe fantasma (@informefantasma): marca sin nombre de persona, 20 mil seguidores, sin biografía ni ancla editorial (verificado 2026-10-22)"),
     "inst12.csv": ("medio local o regional", "guajira24horas.com"),
     "Inst3.csv": ("medio local o regional", "Guajira News"),
     "inst13.csv": ("medio local o regional", "Diario del Norte (La Guajira)"),
