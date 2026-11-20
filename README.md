@@ -93,7 +93,7 @@ prevalencias.
 
 ## Cómo citar
 
-ExoDoxa. (2026). *Repertorios del castigo: scripts de armonización y análisis de comentarios en Facebook, Instagram y TikTok* (Versión 1.1.0) [Software]. Zenodo. [DOI_V110]
+ExoDoxa. (2026). *Repertorios del castigo: scripts de armonización y análisis de comentarios en Facebook, Instagram y TikTok* (Versión 1.1.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.24405677
 
 El DOI 10.5281/zenodo.23557846 apunta siempre a la versión más reciente. Ver también [CITATION.cff](CITATION.cff).
 
