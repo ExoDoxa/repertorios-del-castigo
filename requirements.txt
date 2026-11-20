@@ -1,3 +1,8 @@
 openpyxl>=3.1
+# Scripts de análisis:
+pandas>=2.2
+numpy>=1.26
+matplotlib>=3.8
+pyarrow>=15
 # Solo para transcribir_videos.py:
 faster-whisper>=1.2

@@ -21,9 +21,16 @@ repertorios-del-castigo/
 │   │                            (FB+IG, TikTok, y las tres plataformas juntas) + inventarios
 │   ├── generar_registro.py      registro de publicaciones: texto, cuenta, tipo de cuenta,
 │   │                            formato, control de fecha y transcripción
-│   └── transcribir_videos.py    transcripción del audio de videos con faster-whisper
+│   ├── transcribir_videos.py    transcripción del audio de videos con faster-whisper
+│   └── analisis/
+│       ├── etapa0_base_analitica.py   base analítica (hora de Colombia, ventanas, tipo de cuenta)
+│       │                              y verificación de 48 cifras
+│       ├── etapa1_figuras.py          figuras descriptivas (n absolutos, sin pruebas estadísticas)
+│       ├── etapa2_recuperacion.py     recuperación léxica por repertorio
+│       └── etapa3_marco_muestreo.py   marco de muestreo intencional y orden de lectura
 ├── lexico/
-│   └── lexico_tematico.json     léxico exploratorio (6 dimensiones y 4 encuadres)
+│   ├── lexico_tematico.json         léxico exploratorio del dashboard (6 dimensiones y 4 encuadres)
+│   └── lexico_repertorios_v1.4.json léxico de recuperación por repertorio (12 repertorios)
 ├── docs/
 │   ├── diccionario_variables.md las 31 columnas de las bases
 │   └── recoleccion.md           cómo se recolectaron los datos y sus límites
@@ -41,6 +48,20 @@ python scripts/generar_bases.py --datos datos/bases_armonizadas
 python scripts/generar_registro.py --datos datos/bases_armonizadas
 python scripts/transcribir_videos.py video1.mp4 video2.mp4
 ```
+
+Scripts de análisis (se ejecutan desde una carpeta de trabajo; leen las bases de `datos/bases_armonizadas`
+o de la carpeta indicada en la variable `EXODOXA_DATOS`, y escriben sus salidas en la carpeta actual):
+
+```
+python scripts/analisis/etapa0_base_analitica.py
+python scripts/analisis/etapa2_recuperacion.py lexico/lexico_repertorios_v1.4.json
+python scripts/analisis/etapa3_marco_muestreo.py
+python scripts/analisis/etapa1_figuras.py
+```
+
+`etapa1_figuras.py` excluye nombres de personas de las figuras de términos con una lista local
+(`terminos_excluidos_nombres.txt`) que **no se publica**; sin ella, el script avisa qué términos revisar.
+Sus salidas (base analítica, índices, muestra) contienen datos del corpus y no deben publicarse.
 
 `build_corpus.py` también puede usarse solo:
 
@@ -61,6 +82,10 @@ y en la metodología del artículo.
 
 ## Léxico
 
+`lexico/lexico_repertorios_v1.4.json` es el léxico de recuperación usado para orientar la lectura en el
+estudio: 12 repertorios definidos con expresiones regulares. Recupera candidatos para lectura; un
+comentario recuperado no es un comentario codificado y sus conteos no son prevalencias.
+
 `lexico/lexico_tematico.json` es una **herramienta exploratoria de recuperación**, no una codificación
 validada. Las dimensiones marcadas como `solo_tema` detectan que se habla de un tema, no que el
 fenómeno ocurra. En el estudio se usó para localizar segmentos de lectura, nunca para estimar
@@ -68,7 +93,7 @@ prevalencias.
 
 ## Cómo citar
 
-ExoDoxa. (2026). *Repertorios del castigo: scripts de armonización y análisis de comentarios en Facebook, Instagram y TikTok* (Versión 1.0.1) [Software]. Zenodo. https://doi.org/10.5281/zenodo.23574288
+ExoDoxa. (2026). *Repertorios del castigo: scripts de armonización y análisis de comentarios en Facebook, Instagram y TikTok* (Versión 1.1.0) [Software]. Zenodo. [DOI_V110]
 
 El DOI 10.5281/zenodo.23557846 apunta siempre a la versión más reciente. Ver también [CITATION.cff](CITATION.cff).
 

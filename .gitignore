@@ -9,6 +9,12 @@ datos/*
 *.mp4
 *.har
 *.duckdb
+*.parquet
+*.docx
+*.png
+terminos_excluidos_nombres.txt
+figuras/
+tablas_anexo/
 captions_*.json
 transcripciones_*.json
 
